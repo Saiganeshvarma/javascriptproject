@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Clock</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #282c34;
+      color: #61dafb;
+      font-size: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="clock"></div>
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const data = now.toLocaleTimeString();
+      document.getElementById('clock').textContent = data;
+    }
+    setInterval(updateClock, 3000);
+    updateClock(); // Initial call
+  </script>
+</body>
+</html>
