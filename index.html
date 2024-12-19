@@ -18,6 +18,7 @@
   </style>
 </head>
 <body>
+  <h1>This is the digital clock timer</h1>
   <div id="clock"></div>
   <script>
     function updateClock() {
@@ -25,7 +26,7 @@
       const data = now.toLocaleTimeString();
       document.getElementById('clock').textContent = data;
     }
-    setInterval(updateClock, 3000);
+    setInterval(updateClock, 2000);
     updateClock(); // Initial call
   </script>
 </body>
